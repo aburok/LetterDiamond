@@ -20,5 +20,5 @@ var diamond = Printer.PrintDiamond(letter);
 Console.WriteLine($"Diamond from letter '{letter}'.");
 Console.WriteLine(diamond);
 
-Console.WriteLine("Press Enter to finish.");
-Console.ReadLine();
+// Console.WriteLine("Press Enter to finish.");
+// Console.ReadLine();
