@@ -1,3 +1,9 @@
+# Launching application
+
+Open `.\LetterDiamond\DiamondPrinter\bin\Debug\net6.0` folder.
+
+Run `DiamondPrinter.exe <letter>`.
+
 # RecruitmentTests
 
 Hello! :wave:
