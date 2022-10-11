@@ -18,24 +18,23 @@ public static class Printer
 
     private static List<string> GetTopHalfOfDiamond(char mainLetter)
     {
-        var distanceFromA = (mainLetter - 'A');
-        var diamondWidth = (int) distanceFromA * 2 + 1;
-
         var lines = new List<string>();
 
-        for (var row = 0; row <= distanceFromA; row++)
+        for (var letter = 'A'; letter <= mainLetter; letter++)
         {
-            lines.Add(PrintLine(mainLetter, row, diamondWidth));
+            lines.Add(PrintLine(mainLetter, letter));
         }
 
         return lines;
     }
 
-    private static string PrintLine(char mainLetter, int row, int count)
+    public static string PrintLine(char mainLetter, char letter)
     {
+        var distanceFromA = (mainLetter - 'A');
+        var diamondWidth = distanceFromA * 2 + 1;
+        
         var lineBuilder = new StringBuilder();
-        var letter = (char) ('A' + row);
-        for (var column = 0; column < count; column++)
+        for (var column = 0; column < diamondWidth; column++)
         {
             var character = ShouldLetterBeInColumn(letter, mainLetter, column) ? $"{letter}" : EmptySpace; 
             lineBuilder.Append(character);
